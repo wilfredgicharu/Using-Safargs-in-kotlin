@@ -1,0 +1,58 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+
+
+
+// add safeargs plugin here
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+//add kotlin parcelize plugin here
+apply plugin: "kotlin-parcelize"
+
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+
+  defaultConfig {
+    applicationId "com.raywenderlich.android.safeargs"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildFeatures {
+    viewBinding = true
+  }
+
+  // Signing configuration for the release build, used in buildTypes.release
+  signingConfigs {
+    release {
+      storePassword 'password'
+      keyAlias 'alias'
+      keyPassword 'password'
+      storeFile file('../keystore.jks')
+    }
+  }
+
+  buildTypes {
+    release {
+      // Enable code shrinking and obfuscation
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+      signingConfig signingConfigs.release
+    }
+  }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  implementation "androidx.appcompat:appcompat:1.2.0"
+  implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+  implementation "com.google.android.material:material:1.2.1"
+  implementation "androidx.fragment:fragment-ktx:1.2.5"
+  implementation "androidx.navigation:navigation-fragment-ktx:2.3.2"
+  implementation "androidx.navigation:navigation-ui-ktx:2.3.2"
+
+}

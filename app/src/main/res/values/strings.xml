@@ -1,0 +1,19 @@
+<resources>
+  <string name="app_name">SafeFly</string>
+  <string name="hint_full_name">Full Name</string>
+  <string name="hint_age">Age</string>
+  <string name="hint_passport_number">Passport Number</string>
+  <string name="title_traveler_information">Traveler Information</string>
+  <string name="title_travel_add_ons">Travel Add-Ons</string>
+  <string name="content_description_add_on">Flight add-on icon</string>
+  <string name="title_promo_code">Promo Code</string>
+  <string name="hint_promo_code">Promo Code</string>
+  <string name="label_next">Next</string>
+  <string name="label_confirm">Confirm</string>
+  <string name="traveler_information_full_name">Full Name: %s</string>
+  <string name="traveler_information_age">Age: %d</string>
+  <string name="traveler_information_passport_number">Passport Number: %s</string>
+  <string name="promo_code_none">None</string>
+  <string name="travel_add_ons_none">None</string>
+  <string name="travel_information_confirmation_message">Travel information confirmed!</string>
+</resources>

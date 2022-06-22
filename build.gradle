@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+  ext {
+    kotlin_version = "1.4.21"
+    compileSdkVersion = 29
+    targetSdkVersion = compileSdkVersion
+    minSdkVersion = 19
+  }
+
+  repositories {
+    google()
+    jcenter()
+  }
+
+  dependencies {
+    classpath "com.android.tools.build:gradle:4.1.2"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+
+    // add safe args gradle plugin dependency here
+    classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.2"
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
